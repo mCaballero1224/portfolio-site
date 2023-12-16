@@ -1,6 +1,6 @@
 This favicon was generated using the following font:
 
-- Font Title: M PLUS Code Latin
-- Font Author: Copyright 2021 The M+ FONTS Project Authors (https://github.com/coz-m/MPLUS_FONTS)
-- Font Source: http://fonts.gstatic.com/s/mpluscodelatin/v13/hv-ylyV-aXg7x7tULiNXXBA0Np4WMS8fDIymHY8fy8wn4_ifLAtrObKDO0Xf1EbA6i5MqF9TRwg.ttf
+- Font Title: Lily Script One
+- Font Author: Copyright (c) 2012-2013, Julia Petretta (www.juliapetretta.com julia.petretta@googlemail.com), with Reserved Font Name 'Lily'
+- Font Source: http://fonts.gstatic.com/s/lilyscriptone/v15/LhW9MV7ZMfIPdMxeBjBvFN8SXLS4gsSjQNsRMg.ttf
 - Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
