@@ -1,38 +1,77 @@
+:root {
+    --custom-color-name:;
+}
+
+html {
+    --rose-taupe: #8E6157ff;
+    --orange-crayola: #DF7E48ff;
+    --buff: #E3A57Bff;
+    --licorice: #240E0Cff;
+    --dark-purple: #2C1E2Aff;
+    --main-background: #000000e5;
+}
+
 .App {
-  text-align: center;
+    margin: 0;
+    padding: 1rem;
+    box-sizing: border-box;
+    color: var(--buff);
+    background-color: var(--main-background);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header {
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header h1 {
+    text-transform: uppercase;
+    margin: 0 auto;
+    text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.container {
+    background-color: var(--licorice);
+    padding: 1rem;
+    color: var(--buff);
+    margin: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.sub-container {
+    padding: 1rem;
+    border: 2px solid var(--buff);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* ----- Anchors ----- */
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--orange-crayola);
 }
+ 
+/* ----- Terminal Styles ----- */
+
+.terminal_container {
+}
+
+.terminal {
+    height: 400px;
+}
+
+.terminal_prompt {
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+}
+
+.terminal_prompt_input {
+    background-color: transparent;
+    border: none;
+    margin-left: 5px;
+    color: var(--buff);
+}
+
+.terminal_prompt_input:focus {
+    outline: none;
+}
+
