@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
 :root {
     --custom-color-name:;
 }
@@ -11,67 +13,19 @@ html {
     --main-background: #000000e5;
 }
 
-.App {
-    margin: 0;
-    padding: 1rem;
-    box-sizing: border-box;
-    color: var(--buff);
+body {
+    font-family: 'VT323', monospace;
+    line-height: 1.25;
+    font-size: 18px;
     background-color: var(--main-background);
-}
-
-header {
-
-}
-
-header h1 {
-    text-transform: uppercase;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.container {
-    background-color: var(--licorice);
-    padding: 1rem;
     color: var(--buff);
-    margin: 1rem;
 }
-
-.sub-container {
-    padding: 1rem;
-    border: 2px solid var(--buff);
-}
-
-/* ----- Anchors ----- */
 
 a {
-    text-decoration: none;
-    font-weight: bold;
     color: var(--orange-crayola);
 }
- 
-/* ----- Terminal Styles ----- */
 
-.terminal_container {
-}
-
-.terminal {
-    height: 400px;
-}
-
-.terminal_prompt {
-    font-weight: bold;
-    display: flex;
-    flex-direction: row;
-}
-
-.terminal_prompt_input {
-    background-color: transparent;
-    border: none;
-    margin-left: 5px;
-    color: var(--buff);
-}
-
-.terminal_prompt_input:focus {
-    outline: none;
+.App {
+    padding: 1rem;
 }
 
