@@ -1,7 +1,7 @@
 function Header() {
     return(
-        <header className="container">
-            <h1>michaelcaballero.xyz</h1>
+        <header className="App-header container">
+            <h1>The Stray Sheep</h1>
         </header>
     );
 }
