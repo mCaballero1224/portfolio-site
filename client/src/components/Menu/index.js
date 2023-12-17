@@ -1,9 +1,13 @@
 import { NavLink } from 'react-router-dom';
 function Menu() {
     return(
-        <nav>
-            <NavLink>About Me</NavLink>
-        </nav>
+        <div className="">
+            <nav className="">
+                <ul>
+                    <li><NavLink>About Me</NavLink></li>
+                </ul>
+            </nav>
+        </div>
     );
 }
 
