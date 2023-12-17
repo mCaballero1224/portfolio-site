@@ -9,7 +9,7 @@ import HomePage from './pages/HomePage.js';
 function App() {
 
     return (
-        <div className="App crt">
+        <div className="App">
             <Router>
                 <Routes>
                     <Route path="/" element={<HomePage/>} />
