@@ -33,11 +33,19 @@ body {
 	width: 100%;
 }
 
+main {
+	padding: 2%;
+}
+
 a {
 	color: var(--picton-blue);
 }
 
-a:hover {
+p {
+	text-indent: 2em;
+}
+
+a:hover:not(.nav-link) {
 	color: var(--jasper);
 	font-weight: bold;
 }
@@ -61,12 +69,12 @@ nav {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
+	padding: 0;
 }
 
 .nav-item {
 	list-style: none;
 	background-color: var(--bittersweet);
-	padding: 1% 2%;
 	text-transform: uppercase;
 	border-left: 1px solid var(--night);
 	border-right: 1px solid var(--night);
@@ -74,8 +82,19 @@ nav {
 
 .nav-link {
 	text-decoration: none;
-	color: var(--bole);
+	color: var(--night);
 	font-weight: bolder;
+	padding: 10px 20px;
+	font-size: 1.5em;
+}
+
+.nav-item:hover {
+	background-color: var(--night);
+}
+
+.nav-item:hover .nav-link {
+	background-color: var(--night);
+	color: var(--baby-powder);
 }
 
 label {
@@ -93,4 +112,26 @@ input, textarea {
 
 .text-center {
 	text-align: center;
+}
+
+.social-link {
+	background-color: var(--baby-powder);
+	padding: 1%;
+	border-radius: 20px;
+}
+
+
+#about-header {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+#about-header .profile-picture {
+	margin-right: 2%;
+}
+
+#basic-info {
+	list-style: none;
+	padding: 0;
 }
