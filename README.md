@@ -16,7 +16,7 @@ So, feel free to fork the repo and carve out your own chunk of the internet with
 
 I ended up going with a Shared CPU instance running Debian with 1 core, 2GB of RAM, and 55GB of 
 storage. All that with no add-ons is set to cost me about $10/month. Not too bad, honestly. I 
-nabbed a few domains from [NameCheap.com](https://namecheap.com). I got multiple so that I could choose 
+nabbed a few domains from [NameCheap](https://namecheap.com). I got multiple so that I could choose 
 from the lot a later date.
 
 
@@ -34,7 +34,7 @@ NOTE: Add an image here to show VULTR dashboard for VPS info
 
 After logging into your  the following commands (assuming you're also running Debian) to update/upgrade packages
 
-`sudo apt update'
+`sudo apt update`
 `sudo apt upgrade`
 
 ### Creating a new User 
