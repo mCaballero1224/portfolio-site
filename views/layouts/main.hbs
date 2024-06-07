@@ -1,0 +1,36 @@
+<!-- main.hbs -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Michael's Terminal</title>
+		<link rel="stylesheet" type="text/css" href="/css/styles.css" />
+		<link rel="icon" type="image/x-icon" href="/assets/favicon.ico"/>
+	</head>
+	<body>
+	<header class="container text-center">
+		<h1>{{pageTitle}}</h1>
+		<p>{{flavorText}}</p>
+	</header>
+	<nav>
+		<ul class="nav-list">
+			<li class="nav-item">
+				<a class="nav-link" href="/">Home</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/about">About</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/contact">Contact</a>
+			</li>
+		</ul>
+	</nav>
+	{{{body}}}
+	</body>
+	<footer class="container text-center">
+		<p>&copy; Michael Caballero (2024)</p>
+	</footer>
+</html>
