@@ -34,7 +34,12 @@ NOTE: Add an image here to show VULTR dashboard for VPS info
 
 After logging into your  the following commands (assuming you're also running Debian) to update/upgrade packages
 
+To update packages:
+
 `sudo apt update`
+
+To upgrade packages: 
+
 `sudo apt upgrade`
 
 ### Creating a new User 
