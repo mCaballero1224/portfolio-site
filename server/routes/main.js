@@ -52,10 +52,13 @@ router.get('/blog', async (req, res) => {
 		const hasNextPage = nextPage <= Math.ceil(count / perPage);
 		const hasPrevPage = nextPage > 2;
 
+		console.log({locals, data});
+
 		// render the blog page based on the above variables
 		res.render('blog', {
-			locals, 
-			data ,
+			pageTitle: locals.pageTitle, 
+			flavorText: locals.flavorText,
+			data,
 			current: page,
 			nextPage: hasNextPage ? nextPage : null,
 			prevPage: hasPrevPage ? prevPage : null,
@@ -83,7 +86,11 @@ router.get('/post/:id', async (req, res) => {
 
 	try {
 		const data = await Post.findById({ _id: slug }).lean();
-		res.render('post', { locals, data });
+		res.render('post', {
+			pageTitle: locals.pageTitle,
+			flavorText: locals.flavorText,
+			data 
+		});
 	} catch(error) {
 		console.log(error);	
 	}
