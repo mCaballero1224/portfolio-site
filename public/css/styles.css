@@ -41,7 +41,7 @@ a {
 	color: var(--picton-blue);
 }
 
-p {
+.indent {
 	text-indent: 2em;
 }
 
@@ -55,6 +55,7 @@ a:vistited {
 }
 
 .container {
+	padding: 2%;
 }
 
 nav {
@@ -70,6 +71,7 @@ nav {
 	flex-direction: row;
 	flex-wrap: nowrap;
 	padding: 0;
+	margin: 0;
 }
 
 .nav-item {
@@ -97,10 +99,10 @@ nav {
 	color: var(--baby-powder);
 }
 
+
+
 label {
 	display: block;
-	margin-bottom: 2%;
-	display: none;
 }
 
 input, textarea {
@@ -120,6 +122,17 @@ input, textarea {
 	border-radius: 20px;
 }
 
+form {
+	margin: 2%;
+}
+
+fieldset {
+	margin: 2%;
+}
+
+legend {
+	padding: 1% 2%;
+}
 
 #about-header {
 	display: flex;
@@ -134,4 +147,12 @@ input, textarea {
 #basic-info {
 	list-style: none;
 	padding: 0;
+}
+
+#site-goals {
+	margin-left: 2%;
+}
+
+.in-progress {
+	color: yellow;
 }
