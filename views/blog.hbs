@@ -3,13 +3,20 @@
 		<h2 class="aritcles-heading">Latest Posts</h2>
 		
 		<ul class="article-ul">
+			{{#each data}}
 			<li>
-				<a href="#">
-					<span>Post Title</span>
-					<span class="aritcle-list-date">Date</span>
+				<span class="aritcle-list-date">{{formatDate createdAt}} - </span>
+				<a href="/post/{{_id}}">
+					<span>{{title}}</span>
 				</a>
 			</li>
+			{{/each}}
 		</ul>
-		<a href="#" class="pagination">&lt; View Older Posts</a>
+		{{#if hasNextPage}}
+			<a href="/blog/?page={{nextPage}}" class="pagination">&lt; View Older Posts</a>
+		{{/if}}
+		{{#if hasPrevPage}}
+			<a href="/blog/?page={{prevPage}}" class="pagination">View Newer Posts &gt;</a>
+		{{/if}}
 	</section>
 </main>
