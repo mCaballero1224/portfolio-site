@@ -69,6 +69,27 @@ router.get('/blog', async (req, res) => {
 });
 
 
+/* 
+ * GET /
+ * Post :id
+ */
+router.get('/post/:id', async (req, res) => {
+	const locals = {
+		pageTitle: "Blog",
+		flavorText: "Cause I have opinions."
+	}
+
+	let slug = req.params.id;
+
+	try {
+		const data = await Post.findById({ _id: slug }).lean();
+		res.render('post', { locals, data });
+	} catch(error) {
+		console.log(error);	
+	}
+});
+
+
 // contact page
 router.get('/contact', (req, res) => {
 	const locals = {
@@ -78,24 +99,5 @@ router.get('/contact', (req, res) => {
 	res.render('contact', locals);
 });
 
-/*
-function insertPostData() {
-	Post.insertMany([
-		{
-			title: "I use arch btw",
-			body: "A brief history of my time with my favorite Linux distribution - Arch Linux."
-		},
-		{
-			title: "Linux - Shell Scripting",
-			body: "Shell scripts are great for automating stuff that would be a pain to do yourself on a regular basis."
-		},
-		{
-			title: "Client/Server Model",
-			body: "Hosting your own website means you'll be in charge of a server, with the web browser of potential viewers being your clients. What do these things mean? Let's dig into that."
-		},
-	]);
-};
-insertPostData();
-*/
 
 module.exports = router;
