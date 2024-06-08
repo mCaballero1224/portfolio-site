@@ -20,22 +20,8 @@ app.set('view engine', '.hbs'); // tell express to use the handlebars engine whe
 app.use(express.static(path.join(__dirname, '/public'))); // serve "public" directory
 
 /* Routes */
+app.use('/', require('./server/routes/main'));
 
-// main/index page
-app.get('/', (req, res) => {
-	res.render('index', { pageTitle: 'Welcome to my Terminal', flavorText: 'Feel free to poke about.'});
-});
-
-// about page
-app.get('/about', (req, res) => {
-	res.render('about', { pageTitle: 'About', flavorText: 'Who is this nerd?'});
-});
-
-
-// contact page
-app.get('/contact', (req, res) => {
-	res.render('contact', { pageTitle: 'Contact', flavorText: 'Hit me up!'});
-});
 /* Controllers */
 
 /* Listener */
