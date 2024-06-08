@@ -74,7 +74,7 @@ Edit the file `/etc/ssh/sshd_config`. Locate the line with the text `PermitRootL
 
 On your local machine (or wherever you're logging into your VPS from), edit the file `~/.ssh/config`, and enter the following lines:
 
-`
+```
 Host *
     ServerAliveInterval 10
     ServerAliveCountMax 6
@@ -83,7 +83,7 @@ Host landchad
     Hostname (VPS ip address)
     User newusername
     LogLevel=error
-`
+```
 
 Doing this allows you to log into your VPS from your local machine by entering this
 
