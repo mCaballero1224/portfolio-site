@@ -55,7 +55,7 @@ a:vistited {
 }
 
 .container {
-	padding: 2%;
+	padding: 0 10px;
 }
 
 nav {
@@ -155,4 +155,11 @@ legend {
 
 .in-progress {
 	color: yellow;
+}
+
+.pagination {
+	font-size: 1.3em;
+	text-decoration: none;
+	margin-top: 40px;
+	display: inline-block;
 }
