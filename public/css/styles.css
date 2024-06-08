@@ -1,19 +1,10 @@
 :root {
-	/* CSS HEX */
-	--night: #000f08ff;
-	--baby-powder: #f0f4efff;
-	--bole: #6a3e37ff;
-	--bittersweet: #ff785aff;
-	--moonstone: #0fa3b1ff;
-	--picton-blue: #00abe7ff;
-	--jasper: #db504aff;
-
 	/* CSS HSL */
 	--night: hsla(152, 100%, 3%, 1);
 	--baby-powder: hsla(108, 19%, 95%, 1);
 	--bole: hsla(8, 32%, 32%, 1);
 	--bittersweet: hsla(11, 100%, 68%, 1);
-	--moonstone: hsla(185, 84%, 38%, 1);
+	--moonstone: hsla(184.7, 78%, 44.5%, 1);
 	--picton-blue: hsla(196, 100%, 45%, 1);
 	--jasper: hsla(2, 67%, 57%, 1);
 }
@@ -35,6 +26,7 @@ body {
 
 main {
 	padding: 2%;
+	padding-top: 0;
 }
 
 a {
@@ -54,7 +46,7 @@ a:vistited {
 	color: var(--jasper);
 }
 
-.container {
+.container:not(header) {
 	padding: 2%;
 }
 
@@ -104,6 +96,7 @@ input, textarea {
 	margin-bottom: 2%;
 	font-size: 20px;
 	font-family: 'Courier New', monospace;
+	max-width: 80%;
 }
 
 .text-center {
@@ -116,8 +109,14 @@ input, textarea {
 	border-radius: 20px;
 }
 
+.form-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-templow-rows: auto;
+	gap: 20px;
+}
+
 form {
-	margin: 2%;
 }
 
 fieldset {
@@ -204,10 +203,25 @@ legend {
 .logout-btn {
 	margin: 0 auto;
 	padding: 10px 20px;
+	border-radius: 0;
+	border: none;
+	cursor: pointer;
 }
 
 .in-progress {
 	color: yellow;
+}
+
+.btn {
+	padding: 5px 10px;
+	border-radius: 0;
+	background-color: var(--moonstone);
+	border: none;
+	cursor: pointer;
+}
+
+.btn:hover {
+	background-color: hsl(184.8, 47.8%, 46.5%)
 }
 
 .pagination {
