@@ -1,0 +1,33 @@
+<!-- admin.hbs -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Admin Panel</title>
+		<link rel="stylesheet" type="text/css" href="/css/styles.css" />
+		<link rel="icon" type="image/x-icon" href="/assets/favicon.ico"/>
+	</head>
+	<body>
+		<div class="admin-panel-header">
+			<h3>Admin Panel</h3>
+			<nav class="admin-nav">
+				<ul class="nav-list">
+					<a class="nav-link" href="/"><li class="nav-item">Home</li></a>
+					<a class="nav-link" href="/about"><li class="nav-item">About</li></a>
+					<a class="nav-link" href="/blog"><li class="nav-item">Blog</li></a>
+					<a class="nav-link" href="/contact"><li class="nav-item">Contact</li></a>
+				</ul>
+			</nav>
+			<div class="logout-btn-container">
+				<button class="logout-btn">Logout</button>
+			</div>
+		</div>
+		{{{body}}}
+	</body>
+	<footer class="container text-center">
+		<p>&copy; Michael Caballero (2024)</p>
+	</footer>
+</html>
