@@ -12,7 +12,10 @@ So, feel free to fork the repo and carve out your own chunk of the internet with
 - MongoDB for blog database
 
 ## Services Used
-- VULTR for a VPS to host the site along with various services
+- [VULTR](https://www.vultr.com/)for a VPS to host the site along with various services
+- [NameCheap](https://www.namecheap.com) for domain names
+
+NameCheap has DNS settings available for the domains you purchase, but if you're comfortable with something like Cloudfare, the process should be largely the same.
 
 ## Setting up the VPS
 
