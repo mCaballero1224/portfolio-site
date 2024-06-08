@@ -33,6 +33,7 @@ app.use(express.static(path.join(__dirname, '/public'))); // serve "public" dire
 
 /* Routes */
 app.use('/', require('./server/routes/main'));
+app.use('/', require('./server/routes/admin'));
 
 /* Controllers */
 
