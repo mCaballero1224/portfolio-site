@@ -8,6 +8,8 @@ So, feel free to fork the repo and carve out your own chunk of the internet with
 - Node.js with the following modules/packages:
     - Express for the web server
     - Handlebars for templating
+    - Mongoose for MongoDB integration
+- MongoDB for blog database
 
 ## Services Used
 - VULTR for a VPS to host the site along with various services
@@ -42,10 +44,51 @@ To upgrade packages:
 
 `sudo apt upgrade`
 
-### Creating a new User 
+### Setting Up a New User 
 
 The following comes largely from [this handy guide](https://medium.com/illumination/how-to-setup-a-vps-server-a-complete-guide-a3094f8e53f7) I found on Medium about setting up a new VPS.
 Check it out if you'd like to go more in-depth on the subject.
 
+Use the following command to create a new user:
+
+`sudo adduser newusername`
+
+To grant this user sudo priveliges:
+
+`sudo usermod -aG sudo newusername`
 
 
+To further modify access, you can edit the `/etc/sudoers` file via the following command:
+
+`sudo visudo`
+
+To use a specific editor, you can modify the command like so:
+
+`sudo EDITOR=nvim visudo`
+
+#### Disabling Root Login
+
+Edit the file `/etc/ssh/sshd_config`. Locate the line with the text `PermitRootLogin yes`, and change `yes` to `no`. Doing this is for additional security, but not necessary.
+
+#### Setting up Local SSH Settings
+
+On your local machine (or wherever you're logging into your VPS from), edit the file `~/.ssh/config`, and enter the following lines:
+
+`
+Host *
+    ServerAliveInterval 10
+    ServerAliveCountMax 6
+
+Host landchad
+    Hostname (VPS ip address)
+    User newusername
+    LogLevel=error
+`
+
+Doing this allows you to log into your VPS from your local machine by entering this
+
+`ssh landchad`
+
+instead of this
+
+`ssh newusername@(VPS ip address)`
