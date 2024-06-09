@@ -1,14 +1,33 @@
 <div class="container">
-	<h3>Sign In</h3>
+	<form id="sign-in-form" action="/admin" method="POST">
+		<fieldset>
+			<legend>Sign In</legend>
+			<label for="username"><b>Username</b>:</label>
+			<input type="text" placeholder="Enter Username" name="username" id="username">
+
+			<label for="password"><b>Password</b>:</label>
+			<input type="password" placeholder="Enter Password" name="password" id="password">
+
+			<input type="submit" value="Login" class="btn">
+		</fieldset>
+	</form>
+	<!--
+	<form id="register-form" action="/register" method="POST">
+		<fieldset>
+			<legend>Register</legend>
+
+			<label for="registerUsername"><b>Username</b>:</label>
+			<input type="text" placeholder="Enter Username" name="registerUsername" id="registerUsername">
+
+			<label for="registerPassword"><b>Password</b>:</label>
+			<input type="password" placeholder="Enter Password" name="registerPassword" id="registerPassword">
+
+			<label for="passwordConfirmation"><b>Confirm Password</b>:</label>
+			<input type="password" placeholder="Re-enter Password" name="passwordConfirmation" id="passwordConfirmation">
+
+			<input type="submit" value="Register" class="btn">
+		</fieldset>
+
+	</form>
+	-->
 </div>
-
-<form id="sign-in-form">
-	<label for="username"><b>Username</b>:</label>
-	<input type="text" placeholder="Enter Username" name="username" id="username">
-
-	<label for="password"><b>Password</b>:</label>
-	<input type="password" placeholder="Enter Password" name="password" id="password">
-
-	<input type="submit" value="Login" class="btn">
-</form>
-
