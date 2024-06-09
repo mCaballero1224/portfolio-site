@@ -29,12 +29,16 @@ main {
 	padding-top: 0;
 }
 
-a {
-	color: var(--picton-blue);
-}
+/* Typography */
 
 .indent {
 	text-indent: 2em;
+}
+
+/* Links */
+
+a {
+	color: var(--picton-blue);
 }
 
 a:hover:not(.nav-link) {
@@ -46,19 +50,7 @@ a:vistited {
 	color: var(--jasper);
 }
 
-.container:not(header) {
-	padding: 2%;
-}
-
-.container-border {
-	border: 5px solid var(--baby-powder);
-	margin: 2%;
-}
-
-.container-header {
-	margin: 2%;
-}
-
+/* Main Nav */
 
 nav {
 }
@@ -94,8 +86,20 @@ nav {
 	color: var(--baby-powder);
 }
 
+/* Container Styles */
+
+.container:not(header) {
+	padding: 2%;
+}
+
+.container-header {
+	padding-bottom: 20px;
+	padding-left: 20px;
+	border-bottom: 3px solid var(--baby-powder);
+}
 
 
+/* Forms */
 
 label {
 	display: block;
@@ -106,18 +110,12 @@ input, textarea {
 	margin-bottom: 2%;
 	font-size: 20px;
 	font-family: 'Courier New', monospace;
-	max-width: 80%;
 }
 
 .text-center {
 	text-align: center;
 }
 
-.social-link {
-	background-color: var(--baby-powder);
-	padding: 1%;
-	border-radius: 20px;
-}
 
 .form-container {
 	display: grid;
@@ -133,6 +131,14 @@ fieldset {
 
 legend {
 	padding: 1% 2%;
+}
+
+/* Main Page Sections */
+
+.social-link {
+	background-color: var(--baby-powder);
+	padding: 1%;
+	border-radius: 20px;
 }
 
 #about-header {
@@ -153,6 +159,8 @@ legend {
 #site-goals {
 	margin-left: 2%;
 }
+
+/* Admin panel and header */
 
 .admin-panel-header {
 	display: flex;
@@ -201,8 +209,19 @@ legend {
 	text-decoration: underline;
 }
 
-.admin-post-title {
+/* Button containers and styles */
+.btn {
+	padding: 5px 10px;
+	border-radius: 0;
+	background-color: var(--moonstone);
+	border: none;
+	cursor: pointer;
+	color: var(--night);
 	margin: 2%;
+}
+
+.btn:hover {
+	background-color: hsl(184.8, 47.8%, 46.5%)
 }
 
 .logout-btn-container {
@@ -218,24 +237,15 @@ legend {
 	border-radius: 0;
 	border: none;
 	cursor: pointer;
-}
-
-.in-progress {
-	color: yellow;
-}
-
-.btn {
-	padding: 5px 10px;
-	border-radius: 0;
-	background-color: var(--moonstone);
-	border: none;
-	cursor: pointer;
+	background-color: var(--jasper);
+	font-weight: bold;
 	color: var(--night);
-	margin: 2%;
+	text-decoration: none;
 }
 
-.btn:hover {
-	background-color: hsl(184.8, 47.8%, 46.5%)
+.logout-btn:hover {
+	background-color: hsla(2.1, 48.1%, 46.9%, 1);
+	color: var(--night);
 }
 
 .delete {
@@ -248,3 +258,65 @@ legend {
 	margin-top: 40px;
 	display: inline-block;
 }
+
+/* Admin Page Sections */
+#admin-dashboard {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr;
+	max-height: 600px;
+	min-width: 900px;
+}
+
+#admin-post-section, #service-status-monitor {
+	border: 3px solid var(--baby-powder);
+	margin: 2%;
+	padding: 2%;
+	overflow: scroll;
+}
+
+.post-list {
+	padding: 0;
+	margin: 0;
+}
+
+.admin-post {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	padding: 2% 0;
+	border-bottom: 1px solid var(--baby-powder);
+}
+
+.admin-post-title {
+	padding: 2%;
+	flex-grow: 1;
+	list-style: none;
+}
+
+.admin-post-controls {
+	padding: 2%;
+	margin: 2%;
+}
+
+.admin-post-controls a, .admin-post-controls form {
+	margin: 10px;
+}
+
+.admin-edit-btn .admin-delete-btn {
+	display: block;
+	margin-left: auto;
+	margin-right: 0;
+	min-width: 200px;
+}
+
+.admin-delete-btn:hover {
+	background-color: var(--night);
+	color: var(--baby-powder);
+	font-weight: bold;
+	border: 1px solid var(--baby-powder);
+}
+
+
+
+

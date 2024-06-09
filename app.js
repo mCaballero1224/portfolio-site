@@ -8,6 +8,7 @@ const PORT = process.env.PORT;
 const connectDB = require('./server/config/db');
 const path = require('path'); // import path module
 const express = require('express'); // use express library for the web server
+const methodOverride = require('method-override');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const MongoStore = require('connect-mongo');
@@ -38,6 +39,7 @@ app.use(express.static(path.join(__dirname, '/public'))); // serve "public" dire
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
+app.use(methodOverride('_method'));
 
 app.use(session({
 	secret: 'keyboard cat',

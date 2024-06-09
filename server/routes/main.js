@@ -10,7 +10,8 @@ const exphbs = require('express-handlebars');
 router.get('/', (req, res) => {
 	const locals = {
 		pageTitle: "Welcome to my Terminal",
-		flavorText: "Feel free to poke about."
+		flavorText: "Feel free to poke about.",
+		currentRoute: '/'
 	};
 	res.render('index', locals);
 })
@@ -19,7 +20,8 @@ router.get('/', (req, res) => {
 router.get('/about', (req, res) => {
 	const locals = {
 		pageTitle: "About Me",
-		flavorText: "Who is this nerd?"
+		flavorText: "Who is this nerd?",
+		currentRoute: '/about'
 	};
 	res.render('about', locals);
 });
@@ -28,7 +30,8 @@ router.get('/about', (req, res) => {
 router.get('/blog', async (req, res) => {
 	const locals = {
 		pageTitle: "Blog",
-		flavorText: "Cause I have opinions."
+		flavorText: "Cause I have opinions.",
+		currentRoute: '/blog'
 	}
 
 	// limit to 10 blog posts per page

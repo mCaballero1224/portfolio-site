@@ -1,23 +1,32 @@
-<main>
-	<div class="container-border" id="admin-post-section"> 
+<main id="admin-dashboard">
+	<div id="admin-post-section"> 
 		<div class="container-header">
 			<h2>Posts</h2>
 			<a href="/add-post" class="add btn">+Add New</a>
 		</div>
-		<div>
-			<ul class="admin-post">
+		<div id="admin-blog-posts">
+			<div class="post-list">
 				{{#each posts}}
-				<li class="admin-post-title">
-					<a href="/post/{{_id}}">{{title}} &nearr;</a>
-				</li>
-				<div class="admin-post-controls">
-					<a href="/edit-post"/{{_id}}" class="btn">&#9998;Edit</a>
-					<form action="/delete-post/{{_id}}?_method=DELETE" method="POST">
-					<input type="submit" value="Delete" class="delete btn">
-					</form>
+				<div class="admin-post">
+					<li class="admin-post-title">
+						<a href="/post/{{_id}}">{{title}} &nearr;</a>
+						<p>createdAt: {{formatDate createdAt}}</p>
+						<p>updatedAt: {{formatDate updatedAt}}</p>
+					</li>
+					<div class="admin-post-controls">
+						<a href="/edit-post/{{_id}}" class="admin-edit-btn btn">&#9998;Edit</a>
+						<form action="/delete-post/{{_id}}?_method=DELETE" method="POST">
+						<input type="submit" value="Delete" class="admin-delete-btn delete btn">
+						</form>
+					</div>
 				</div>
 				{{/each}}
-			</ul>
+			</div>
+		</div>
+	</div>
+	<div id="service-status-monitor">
+		<div class="container-header">
+			<h2>Services Montior</h2>
 		</div>
 	</div>
 </main>

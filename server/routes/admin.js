@@ -97,6 +97,10 @@ router.get('/dashboard', authMiddleware, async (req, res) => {
 	}
 });
 
+/**
+	* Get /
+	* Admin - Create new blog post
+**/
 router.get("/add-post", authMiddleware, (req, res, next) => {
 	try {
 		const title = "Add Post";
@@ -110,14 +114,77 @@ router.get("/add-post", authMiddleware, (req, res, next) => {
 	
 });
 
-router.post("/add-post", authMiddleware, (req, res, next) => {
+/**
+	* POST /
+	* Admin - Add new blog post 
+**/
+router.post("/add-post", authMiddleware, async (req, res, next) => {
 	try {
-		console.log(req.body);
-		res.redirect('/dashboard');
+		try {
+			const newPost = new Post({
+				title: req.body.title,
+				body: req.body.body
+			});
+
+			await Post.create(newPost);
+			res.redirect('/dashboard');
+		} catch (error) {
+			console.log(error);
+		}
 	} catch (error) {
 		console.log(error);
 	}
 	
+});
+
+/**
+	* GET /
+	* Admin - Edit blog post
+**/
+router.get("/edit-post/:id", authMiddleware, async (req, res, next) => {
+	try {
+		const id = req.params.id;
+		const post = await Post.findById({ _id: id }).lean();
+
+		res.render('admin/edit-post', {
+			title: 'View / Edit Post',
+			layout: adminLayout,
+			data: post
+		});
+	} catch (error) {
+		console.log(error);
+	}
+});
+
+/**
+	* PUT /
+	* Admin - Update blog post
+**/
+router.put("/edit-post/:id", authMiddleware, async (req, res, next) => {
+	try {
+		await Post.findByIdAndUpdate(req.params.id, {
+			title: req.body.title,
+			body: req.body.body,
+			updatedAt: Date.now()
+		});
+
+		res.redirect(`/edit-post/${req.params.id}`);
+	} catch (error) {
+		console.llog(error);
+	}
+});
+
+/**
+	* DELETE /
+	* Admin - Delete blog post
+**/
+router.delete('/delete-post/:id', authMiddleware, async (req, res, next) => {
+	try {
+		await Post.deleteOne({ _id: req.params.id });
+		res.redirect('/dashboard');
+	} catch (error) {
+		console.log(error);
+	}
 });
 
 /**
@@ -151,5 +218,14 @@ router.post('/register', async (req, res) => {
 	}
 });
 
+
+/**
+	* DELETE /
+	* Admin - Logout 
+**/
+router.get('/logout', (req, res) => {
+	res.clearCookie('token');
+	res.redirect('/');
+});
 
 module.exports = router;
