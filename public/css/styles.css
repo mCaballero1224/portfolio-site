@@ -112,12 +112,10 @@ input, textarea {
 .form-container {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-templow-rows: auto;
+	grid-template-rows: auto;
 	gap: 20px;
 }
 
-form {
-}
 
 fieldset {
 	margin: 2%;
