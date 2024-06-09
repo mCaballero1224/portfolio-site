@@ -50,6 +50,16 @@ a:vistited {
 	padding: 2%;
 }
 
+.container-border {
+	border: 5px solid var(--baby-powder);
+	margin: 2%;
+}
+
+.container-header {
+	margin: 2%;
+}
+
+
 nav {
 }
 
@@ -191,6 +201,10 @@ legend {
 	text-decoration: underline;
 }
 
+.admin-post-title {
+	margin: 2%;
+}
+
 .logout-btn-container {
 	align-self: flex-end;
 	margin: auto 0;
@@ -216,10 +230,16 @@ legend {
 	background-color: var(--moonstone);
 	border: none;
 	cursor: pointer;
+	color: var(--night);
+	margin: 2%;
 }
 
 .btn:hover {
 	background-color: hsl(184.8, 47.8%, 46.5%)
+}
+
+.delete {
+	background-color: var(--jasper);
 }
 
 .pagination {

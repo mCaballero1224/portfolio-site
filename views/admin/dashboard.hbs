@@ -1,3 +1,23 @@
 <main>
-	<h3>Dashboard</h3>
+	<div class="container-border" id="admin-post-section"> 
+		<div class="container-header">
+			<h2>Posts</h2>
+			<a href="/add-post" class="add btn">+Add New</a>
+		</div>
+		<div>
+			<ul class="admin-post">
+				{{#each posts}}
+				<li class="admin-post-title">
+					<a href="/post/{{_id}}">{{title}} &nearr;</a>
+				</li>
+				<div class="admin-post-controls">
+					<a href="/edit-post"/{{_id}}" class="btn">&#9998;Edit</a>
+					<form action="/delete-post/{{_id}}?_method=DELETE" method="POST">
+					<input type="submit" value="Delete" class="delete btn">
+					</form>
+				</div>
+				{{/each}}
+			</ul>
+		</div>
+	</div>
 </main>

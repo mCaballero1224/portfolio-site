@@ -83,7 +83,41 @@ router.post('/admin', async (req, res) => {
 **/
 
 router.get('/dashboard', authMiddleware, async (req, res) => {
-	res.render('admin/dashboard', { layout: adminLayout });
+	try {
+		const title = "Dashboard";
+		const data = await Post.find().lean();
+		res.render('admin/dashboard', {
+			layout: adminLayout,
+			title: title,
+			posts: data
+		});
+
+	} catch (error) {
+		console.log(error);
+	}
+});
+
+router.get("/add-post", authMiddleware, (req, res, next) => {
+	try {
+		const title = "Add Post";
+		res.render('admin/add-post', { 
+			title: title,
+			layout: adminLayout,
+		});
+	} catch (error) {
+		console.log(error);
+	}
+	
+});
+
+router.post("/add-post", authMiddleware, (req, res, next) => {
+	try {
+		console.log(req.body);
+		res.redirect('/dashboard');
+	} catch (error) {
+		console.log(error);
+	}
+	
 });
 
 /**
