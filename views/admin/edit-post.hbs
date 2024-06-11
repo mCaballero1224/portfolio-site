@@ -1,8 +1,8 @@
 <main>
 	<form action="/delete-post/{{data._id}}?_method=DELETE" method="POST">
-		<input type="submit" value="Delete" class="admin-delete-btn btn">
+		<input type="submit" value="Delete">
 	</form>
-	<form id="blog-edit-form" action="/edit-post/{{data._id}}?_method=PUT" method="POST">
+	<form action="/edit-post/{{data._id}}?_method=PUT" method="POST">
 		<fieldset>
 			<legend>View / Edit post</legend>
 			

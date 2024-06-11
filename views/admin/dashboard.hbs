@@ -1,22 +1,22 @@
-<main id="admin-dashboard">
-	<div id="admin-post-section"> 
-		<div class="container-header">
+<main>
+	<div> 
+		<div>
 			<h2>Posts</h2>
 			<a href="/add-post" class="add btn">+Add New</a>
 		</div>
-		<div id="admin-blog-posts">
-			<div class="post-list">
+		<div>
+			<div>
 				{{#each posts}}
-				<div class="admin-post">
-					<li class="admin-post-title">
+				<div>
+					<li>
 						<a href="/post/{{_id}}">{{title}} &nearr;</a>
 						<p>createdAt: {{formatDate createdAt}}</p>
 						<p>updatedAt: {{formatDate updatedAt}}</p>
 					</li>
-					<div class="admin-post-controls">
-						<a href="/edit-post/{{_id}}" class="admin-edit-btn btn">&#9998;Edit</a>
+					<div>
+						<a href="/edit-post/{{_id}}"">&#9998;Edit</a>
 						<form action="/delete-post/{{_id}}?_method=DELETE" method="POST">
-						<input type="submit" value="Delete" class="admin-delete-btn delete btn">
+						<input type="submit" value="Delete">
 						</form>
 					</div>
 				</div>
@@ -24,8 +24,8 @@
 			</div>
 		</div>
 	</div>
-	<div id="service-status-monitor">
-		<div class="container-header">
+	<div>
+		<div>
 			<h2>Services Montior</h2>
 		</div>
 	</div>

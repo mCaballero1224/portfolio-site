@@ -1,322 +1,72 @@
 :root {
 	/* CSS HSL */
-	--night: hsla(152, 100%, 3%, 1);
-	--baby-powder: hsla(108, 19%, 95%, 1);
-	--bole: hsla(8, 32%, 32%, 1);
-	--bittersweet: hsla(11, 100%, 68%, 1);
-	--moonstone: hsla(184.7, 78%, 44.5%, 1);
-	--picton-blue: hsla(196, 100%, 45%, 1);
-	--jasper: hsla(2, 67%, 57%, 1);
-}
-
-html {
-	margin: 0;
-	padding: 0;
+	--eerie-black: hsla(120, 2%, 13%, 1);
+	--charcoal: hsla(215, 24%, 25%, 1);
+	--thistle: hsla(282, 39%, 86%, 1);
+	--blue-munsell: hsla(186, 93%, 32%, 1);
+	--orange-web: hsla(40, 90%, 51%, 1);
+	--white-smoke: hsla(0, 0%, 96%, 1);
+	--dark-spring-green: hsla(150, 41%, 32%, 1);
+	--emerald: hsla(159, 70%, 51%, 1);
+	--amaranth-purple: hsla(346, 71%, 38%, 1);
+	--red-crayola: hsla(348, 85%, 54%, 1);
+	--base-font-size: 1.25em;
 }
 
 body {
-	background-color: var(--night);
-	color: var(--baby-powder);
 	font-family: 'Courier New', monospace;
-	font-size: 1.25em;
-	margin: 0 auto;
-	padding: 0;
-	width: 100%;
-}
-
-main {
-	padding: 2%;
-	padding-top: 0;
+	background-color: var(--eerie-black);
+	color: var(--white-smoke);
+	font-size: var(--base-font-size);
 }
 
 /* Typography */
+p {
+	
+}
 
 .indent {
 	text-indent: 2em;
 }
 
-/* Links */
-
 a {
-	color: var(--picton-blue);
+	color: var(--emerald);
 }
 
-a:hover:not(.nav-link) {
-	color: var(--jasper);
-	font-weight: bold;
-}
-
-a:vistited {
-	color: var(--jasper);
-}
-
-/* Main Nav */
-
-nav {
-}
-
-.nav-list {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: flex-start;
-	background-color: var(--baby-powder);
-}
-
-.nav-item {
-	list-style: none;
-	color: var(--night);
-	font-weight: bolder;
-	padding: 10px 20px; 
-}
-
-.nav-link {
-	text-align: center;
-	text-decoration: none;
-	padding: 0;
-	margin: auto 0;
-	background-color: var(--jasper);
-}
-
-.nav-link:hover {
-	background-color: var(--night);
-}
-
-.nav-link:hover .nav-item {
-	color: var(--baby-powder);
-}
-
-/* Container Styles */
-
-.container:not(header) {
-	padding: 2%;
-}
-
-.container-header {
-	padding-bottom: 20px;
-	padding-left: 20px;
-	border-bottom: 3px solid var(--baby-powder);
-}
-
-
-/* Forms */
-
-label {
-	display: block;
-}
-
-input, textarea {
-	display: block;
-	margin-bottom: 2%;
-	font-size: 20px;
-	font-family: 'Courier New', monospace;
+a:hover {
+	color: var(--red-crayola);
 }
 
 .text-center {
 	text-align: center;
 }
 
-
-.form-container {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: auto;
-	gap: 20px;
+.page-header {
+	padding: 1% 0 0;
 }
 
 
-fieldset {
-	margin: 2%;
+/* Main Navbar */
+.main-nav {
+	margin: 2% 0;
+	background-color: var(--white-smoke);
 }
 
-legend {
-	padding: 1% 2%;
-}
-
-/* Main Page Sections */
-
-.social-link {
-	background-color: var(--baby-powder);
-	padding: 1%;
-	border-radius: 20px;
-}
-
-#about-header {
+.main-nav .nav-list {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
-}
-
-#about-header .profile-picture {
-	margin-right: 2%;
-}
-
-#basic-info {
 	list-style: none;
-	padding: 0;
-}
-
-#site-goals {
-	margin-left: 2%;
-}
-
-/* Admin panel and header */
-
-.admin-panel-header {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	padding: 0;
 	margin: 0;
-	background-color: var(--moonstone);
-	color: var(--night);
-}
-
-.admin-panel-header h3 {
-	margin: auto 0;
-	align-self: flex-start;
-	padding: 2%;
-}
-
-.admin-nav {
-	align-self: center;
-	flex-grow: 1;
-	
-}
-
-.admin-nav .nav-list {
-	display: flex;
-	flex-direction: row;
-	background-color: var(--moonstone);
-	justify-content: space-around;
-	margin: 0 2%;
-}
-
-.admin-nav .nav-link {
 	padding: 0;
-	margin: 0;
-	background-color: var(--moonstone);
 }
 
-.admin-nav .nav-list .nav-link .nav-item {
+.main-nav .nav-list .nav-link {
+	background-color: var(--blue-munsell);
+	margin: 0;
 	padding: 0;
-	margin: 0;
-	color: var(--baby-powder);
-	text-transform: uppercase;
 }
 
-.admin-nav .nav-list .nav-link:hover .nav-item {
-	text-decoration: underline;
+.nav-item {
+	padding: 20px;
 }
-
-/* Button containers and styles */
-.btn {
-	padding: 5px 10px;
-	border-radius: 0;
-	background-color: var(--moonstone);
-	border: none;
-	cursor: pointer;
-	color: var(--night);
-	margin: 2%;
-}
-
-.btn:hover {
-	background-color: hsl(184.8, 47.8%, 46.5%)
-}
-
-.logout-btn-container {
-	align-self: flex-end;
-	margin: auto 0;
-	color: var(--baby-powder);
-	padding: 2%;
-}
-
-.logout-btn {
-	margin: 0 auto;
-	padding: 10px 20px;
-	border-radius: 0;
-	border: none;
-	cursor: pointer;
-	background-color: var(--jasper);
-	font-weight: bold;
-	color: var(--night);
-	text-decoration: none;
-}
-
-.logout-btn:hover {
-	background-color: hsla(2.1, 48.1%, 46.9%, 1);
-	color: var(--night);
-}
-
-.delete {
-	background-color: var(--jasper);
-}
-
-.pagination {
-	font-size: 1.3em;
-	text-decoration: none;
-	margin-top: 40px;
-	display: inline-block;
-}
-
-/* Admin Page Sections */
-#admin-dashboard {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr;
-	max-height: 600px;
-	min-width: 900px;
-}
-
-#admin-post-section, #service-status-monitor {
-	border: 3px solid var(--baby-powder);
-	margin: 2%;
-	padding: 2%;
-	overflow: scroll;
-}
-
-.post-list {
-	padding: 0;
-	margin: 0;
-}
-
-.admin-post {
-	display: flex;
-	flex-direction: row;
-	width: 100%;
-	padding: 2% 0;
-	border-bottom: 1px solid var(--baby-powder);
-}
-
-.admin-post-title {
-	padding: 2%;
-	flex-grow: 1;
-	list-style: none;
-}
-
-.admin-post-controls {
-	padding: 2%;
-	margin: 2%;
-}
-
-.admin-post-controls a, .admin-post-controls form {
-	margin: 10px;
-}
-
-.admin-edit-btn .admin-delete-btn {
-	display: block;
-	margin-left: auto;
-	margin-right: 0;
-	min-width: 200px;
-}
-
-.admin-delete-btn:hover {
-	background-color: var(--night);
-	color: var(--baby-powder);
-	font-weight: bold;
-	border: 1px solid var(--baby-powder);
-}
-
-
-
-
