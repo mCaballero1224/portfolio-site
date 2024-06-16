@@ -55,8 +55,6 @@ router.get('/blog', async (req, res) => {
 		const hasNextPage = nextPage <= Math.ceil(count / perPage);
 		const hasPrevPage = nextPage > 2;
 
-		console.log({locals, data});
-
 		// render the blog page based on the above variables
 		res.render('blog', {
 			pageTitle: locals.pageTitle, 

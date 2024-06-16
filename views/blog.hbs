@@ -1,22 +1,25 @@
 <main>
 	<section>
-		<h2>Latest Posts</h2>
-		
+		{{#if hasNextPage}}
+			<h2>Latest Posts</h2>
+		{{else}}
+			<h2>Older Posts</h2>
+		{{/if}}
 		<ul>
 			{{#each data}}
-			<li>
+			<li >
 				<span>{{formatDate createdAt}} - </span>
-				<a href="/post/{{_id}}">
+				<a class="gen-link" href="/post/{{_id}}">
 					<span>{{title}}</span>
 				</a>
 			</li>
 			{{/each}}
 		</ul>
 		{{#if hasNextPage}}
-			<a href="/blog/?page={{nextPage}}">&lt; View Older Posts</a>
+			<a class="static-link" href="/blog/?page={{nextPage}}">&lt; View Older Posts</a>
 		{{/if}}
 		{{#if hasPrevPage}}
-			<a href="/blog/?page={{prevPage}}">View Newer Posts &gt;</a>
+			<a class="static-link" href="/blog/?page={{prevPage}}">View Newer Posts &gt;</a>
 		{{/if}}
 	</section>
 </main>
