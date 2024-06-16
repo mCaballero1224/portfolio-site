@@ -25,7 +25,8 @@ const app = express(); // create instance of the express object to interact with
 
 app.engine('.hbs', engine({
 	extname: ".hbs",
-	helpers: exphbsHelpers
+	helpers: exphbsHelpers,
+	partialsDir: ['views/partials/']
 })); // create an instance of the handlebars engine to process templates
 app.set('view engine', '.hbs'); // tell express to use the handlebars engine whenever encountering an ".hbs" file
 
@@ -48,11 +49,13 @@ app.use(session({
 	store: MongoStore.create({
 		mongoUrl: process.env.MONGODB_URI
 	})
+
 }));
 
 /* Routes */
 app.use('/', require('./server/routes/main'));
 app.use('/', require('./server/routes/admin'));
+app.use('/', require('./server/routes/mailer'));
 
 /* Controllers */
 

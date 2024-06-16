@@ -1,0 +1,11 @@
+<ul class="post-list">
+	{{#each data}}
+	<li class="blog-list-item">
+		<span class="post-date">{{formatDate createdAt}} - </span>
+		<a class="gen-link" href="/post/{{_id}}">
+			<span class="blog-title">{{title}}</span>
+		</a>
+	</li>
+	{{/each}}
+</ul>
+

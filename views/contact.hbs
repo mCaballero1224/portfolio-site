@@ -1,43 +1,46 @@
 <main>
-	<div id="contact-form">
-		<form id="message-form">
-			<fieldset>
+	<div id="form-container">
+		<p class="fine-print">* = required</p>
+		<form id="contact-form">
+			<fieldset id="message-fieldset>
 				<legend>Drop a message</legend>
 
-				<label for="fname">First Name:</label>
-				<input type="text" id="fname" name="fname" placeholder="John">
+				<label for="fname">*First Name:</label>
+				<input type="text" id="fname" name="fname" placeholder="John" required>
 
-				<label for="lname">Last Name:</label>
-				<input type="text" id="lname" name="lname" placeholder="Doe">
+				<label for="lname">*Last Name:</label>
+				<input type="text" id="lname" name="lname" placeholder="Doe" required>
 
-				<label for="email">Email:</label>
-				<input type="email" id="email" name="email" placeholder="johnd@mail.com">
+				<label for="email">*Email:</label>
+				<input type="email" id="email" name="email" placeholder="johnd@mail.com" required>
 
-				<label for="message">Message:</label>
-				<textarea id="message" name="message" cols="50" rows="4" placeholder="Enter your message here (500 characters max)"></textarea>
+				<label for="message">*Message:</label>
+				<textarea id="message" name="message" cols="38" rows="4" placeholder="Enter your message here (500 characters max)" required></textarea>
 
 				<input type="submit" value="Send" class="btn"/>
 			</fieldset>
-		</form>
-		<form id="review-form">
-			<fieldset>
+			<fieldset id="review-fieldset">
 				<legend>Leave a Review</legend>
 
 				<label for="ease-of-navigation">Is the site easy to navigate?</label>
 				<input name="ease-of-navigation" type="radio" value="yes">Yes</input>
 				<input name="ease-of-navigation" type="radio" value="no">No</input>
+				<input name="ease-of-navigation" type="radio" value="n/a" checked>n/a</input>
 
 				<label for="areas-of-interest">Did anything here catch your interest?</label>
-				<textarea  name="areas-of-interest" cols="50" rows="4" placeholder="Let me know what caught your eye!"></textarea>
+				<textarea  name="areas-of-interest" cols="38" rows="4" placeholder="Let me know what caught your eye!" id="areas-of-interest"></textarea>
 
 				<label for="improvements">Is there anything I could do to improve this site?</label>
-				<textarea  name="areas-of-interest" cols="50" rows="4" placeholder="There's always room to improve, right?"></textarea>
+				<textarea  name="improvements" cols="38" rows="4" placeholder="There's always room to improve, right?" id="improvements"></textarea>
 
 				<label for="reccomendation">Would you reccomend this site to anyone?</label>
 				<input name="reccomendation" type="radio" value="yes">Yes</input>
 				<input name="reccomendation" type="radio" value="no">No</input>
+				<input name="reccomendation" type="radio" value="n/a" checked>n/a</input>
+
 				<input type="submit" value="Send" class="btn"/>
 			</fieldset>
 		</form>
 	</div>
 </main>
+<script src="/js/contact.js"></script>

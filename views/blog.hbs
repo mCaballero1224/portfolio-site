@@ -1,20 +1,12 @@
 <main>
-	<section>
+	{{> blog-categories}}
+	<section id="blog-section">
 		{{#if hasNextPage}}
 			<h2>Latest Posts</h2>
 		{{else}}
 			<h2>Older Posts</h2>
 		{{/if}}
-		<ul>
-			{{#each data}}
-			<li >
-				<span>{{formatDate createdAt}} - </span>
-				<a class="gen-link" href="/post/{{_id}}">
-					<span>{{title}}</span>
-				</a>
-			</li>
-			{{/each}}
-		</ul>
+		{{> post-list}}
 		{{#if hasNextPage}}
 			<a class="static-link" href="/blog/?page={{nextPage}}">&lt; View Older Posts</a>
 		{{/if}}

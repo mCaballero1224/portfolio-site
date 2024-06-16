@@ -11,21 +11,12 @@
 		<link rel="icon" type="image/x-icon" href="/assets/favicon.ico"/>
 	</head>
 	<body>
-	<header class="page-header text-center">
+	<header class="page-header">
 		<h1>{{pageTitle}}</h1>
 		<p>{{flavorText}}</p>
 	</header>
-	<nav class="main-nav">
-		<ul class="nav-list">
-			<a href="/" class="nav-link"><li class="nav-item">Home</li></a>
-			<a href="/about" class="nav-link"><li class="nav-item">About</li></a>
-			<a href="/blog" class="nav-link"><li class="nav-item">Blog</li></a>
-			<a href="/contact" class="nav-link"><li class="nav-item">Contact</li></a>
-		</ul>
-	</nav>
+	{{> main-nav}}
 	{{{body}}}
 	</body>
-	<footer>
-		<p>&copy; Michael Caballero (2024)</p>
-	</footer>
+	{{> footer}}
 </html>
