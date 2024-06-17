@@ -26,6 +26,7 @@ const sendMail = (formData) => {
 		${fname} ${lname}'s reveiw: 
 		Ease of Navigation: ${navigation}
 		Areas of Interest: ${interest}
+		Is there anything I could do to improve the site?: ${improvements}
 		Would you reccomend the site to anyone?: ${reccomendation}
 	`;
 
@@ -37,6 +38,7 @@ const sendMail = (formData) => {
 		<h2>${fname} ${lname}'s reveiw:</h2>
 		<P>Ease of Navigation: ${navigation}</p>
 		<p>Areas of Interest: ${interest}</p>
+		<p>Is there anything I could do to improve the site?: ${improvements}<?p>
 		<p>Would you reccomend the site to anyone?: ${reccomendation}</p>
 	`;
 
