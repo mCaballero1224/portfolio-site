@@ -24,8 +24,7 @@ body {
 	font-size: 1.1em;
 }
 
-h1, h2, h3, h4 {
-	color: var(--atomic-tangerine);
+h1 {
 	font-weight: bold;
 }
 
@@ -41,6 +40,12 @@ article {
 header {
 	padding: 2%;
 }
+
+header h1 {
+	color: var(--atomic-tangerine);
+	font-size: 2.4em;
+}
+
 
 header, footer {
 	text-align: center;
@@ -170,7 +175,7 @@ form {
 	width: 100%;
 }
 
-fieldset {
+#contact-form fieldset {
 	padding: 2%;
 	margin: 2% auto;
 	min-width: 400px;
@@ -306,6 +311,10 @@ input[type="submit"]:hover {
 	font-size: .9em;
 }
 
+.blog-header {
+	text-align: center;
+}
+
 .back-buttons {
 	display: flex;
 	flex-direction: row;
@@ -329,7 +338,7 @@ input[type="submit"]:hover {
 		gap: 2%;
 	}
 
-	fieldset {
+	#contact-form fieldset {
 		width: 100%;
 		margin: 0;
 	}

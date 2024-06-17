@@ -3,6 +3,21 @@ const router = express.Router();
 const Post = require('../models/Post');
 const exphbs = require('express-handlebars');
 
+const marked = require('marked');
+const { JSDOM } = require('jsdom');
+const createDOMPurify = require('dompurify');
+
+const window = new JSDOM('').window;
+const DOMPurify = createDOMPurify(window);
+
+
+
+const createCleanHTML = (rawMarkdown) => {
+	const rawHTML = marked.parse(rawMarkdown);
+	const sanitizedHTML = DOMPurify.sanitize(rawHTML);
+	return sanitizedHTML
+}
+
 
 /* Routes */
 
@@ -85,12 +100,28 @@ router.get('/post/:id', async (req, res) => {
 
 	let slug = req.params.id;
 
+
 	try {
 		const data = await Post.findById({ _id: slug }).lean();
+
+		const createdAt = new Date(data.createdAt);
+		const updatedAt = new Date(data.updatedAt);
+		let updated = false;
+
+		if (updatedAt > createdAt) {
+			updated = true;
+		}
+
+		const sanitizedBody = createCleanHTML(data.body);
 		res.render('post', {
 			pageTitle: locals.pageTitle,
 			flavorText: locals.flavorText,
-			data 
+			blogTitle: data.title,
+			blogBody: sanitizedBody,
+			createdAt: data.createdAt,
+			updatedAt: data.updatedAt,
+			updated: updated
+			
 		});
 	} catch(error) {
 		console.log(error);	

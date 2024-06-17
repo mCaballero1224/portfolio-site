@@ -8,8 +8,6 @@ const jwt = require('jsonwebtoken');
 const adminLayout = '../../views/layouts/admin';
 const jwtSecret = process.env.JWT_SECRET;
 
-
-
 /**
 	* GET /
 	* Admin - Login/Regsiter forms 
@@ -87,7 +85,7 @@ router.post('/admin', async (req, res) => {
 router.get('/dashboard', authMiddleware, async (req, res) => {
 	try {
 		const title = "Dashboard";
-		const data = await Post.find().lean();
+		const data = await Post.aggregate([ {$sort: { createdAt: -1 }}]);
 		res.render('admin/dashboard', {
 			layout: adminLayout,
 			title: title,
@@ -125,7 +123,7 @@ router.post("/add-post", authMiddleware, async (req, res, next) => {
 		try {
 			const newPost = new Post({
 				title: req.body.title,
-				body: req.body.body
+				body: req.body.body 
 			});
 
 			await Post.create(newPost);

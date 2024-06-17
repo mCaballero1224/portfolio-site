@@ -2,10 +2,15 @@
 	{{> blog-categories}}
 	<article>
 		<div class="blog-header">
-			<h2>{{data.title}}</h2>
-			<p class="blog-created-date">Posted: {{formatDate data.createdAt}}</p>
+			<h1>{{blogTitle}}</h1>
+			<p class="blog-created-date">Posted: {{formatDate createdAt}}</p>
+			{{#if updated}}
+			<p class="blog-created-date">Last Edited: {{formatDate updatedAt}}</p>
+			{{/if}}
 		</div>
-		<p>{{data.body}}</p>
+		<div class="blog-body">
+		{{{blogBody}}}
+		</div>
 	</article>
 	<div class="back-buttons">
 		<a class="static-link" href="/blog">&larr; Back to Blog</a>
