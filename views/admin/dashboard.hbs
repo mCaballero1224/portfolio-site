@@ -1,32 +1,17 @@
 <main>
-	<div> 
-		<div>
-			<h2>Posts</h2>
-			<a href="/add-post" class="static-link">+Add New</a>
-		</div>
-		<div>
-			<div>
-				{{#each posts}}
-				<div>
-					<li>
-						<a href="/post/{{_id}}">{{title}} &nearr;</a>
-						<p>createdAt: {{formatDate createdAt}}</p>
-						<p>updatedAt: {{formatDate updatedAt}}</p>
-					</li>
-					<div>
-						<a href="/edit-post/{{_id}}"">&#9998;Edit</a>
-						<form action="/delete-post/{{_id}}?_method=DELETE" method="POST">
-						<input type="submit" value="Delete">
-						</form>
-					</div>
-				</div>
-				{{/each}}
-			</div>
-		</div>
+	<div>
+		<h2>ToDo List:</h2>
 	</div>
 	<div>
-		<div>
-			<h2>Services Montior</h2>
-		</div>
+		<h2>Blog:</h2>
+	</div>
+	<div>
+		<h2>Reviews:</h2>
+	</div>
+	<div>
+		<h2>Services:</h2>
+	</div>
+	<div>
+		<h2>Mood Tracker:</h2>
 	</div>
 </main>

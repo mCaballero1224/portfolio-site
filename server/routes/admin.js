@@ -29,7 +29,7 @@ const authMiddleware = (req, res, next) => {
 	const token = req.cookies.token;
 
 	if (!token) {
-		return res.status(401).json({ message: 'Unauthorized' });
+		return res.redirect('/admin');
 	}
 
 	try {
@@ -79,17 +79,36 @@ router.post('/admin', async (req, res) => {
 
 /**
 	* GET /
+	* Admin - Blog 
+**/
+
+router.get('/admin-blog', authMiddleware, async (req, res) => {
+	try {
+		const title = "Blog";
+		const data = await Post.aggregate([ {$sort: { createdAt: -1 }}]);
+		res.render('admin/admin-blog', {
+			layout: adminLayout,
+			title: title,
+			posts: data
+		});
+
+	} catch (error) {
+		console.log(error);
+	}
+});
+
+
+/**
+	* GET /
 	* Admin - Dashboard 
 **/
 
 router.get('/dashboard', authMiddleware, async (req, res) => {
 	try {
 		const title = "Dashboard";
-		const data = await Post.aggregate([ {$sort: { createdAt: -1 }}]);
 		res.render('admin/dashboard', {
 			layout: adminLayout,
 			title: title,
-			posts: data
 		});
 
 	} catch (error) {

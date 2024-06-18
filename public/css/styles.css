@@ -43,7 +43,8 @@ header {
 
 header h1 {
 	color: var(--atomic-tangerine);
-	font-size: 2.4em;
+	font-size: 2.2em;
+	line-height: 1.15em;
 }
 
 
@@ -79,7 +80,7 @@ footer {
 .main-nav .nav-link {
 	flex-grow: 1;
 	background-color: var(--azure);
-	padding: 2%;
+	padding: 20px;
 	color: var(--alabaster);
 }
 
@@ -111,6 +112,7 @@ footer {
 	flex-grow: 1;
 	background-color: var(--azure);
 	padding: 2%;
+	margin: auto 0;
 }
 
 .admin-nav .nav-link:hover  {
@@ -143,7 +145,8 @@ footer {
 }
 
 #sign-in-form {
-
+	max-width: 350px;
+	margin: 2% auto;
 }
 
 #sign-in-form fieldset {
@@ -178,8 +181,8 @@ form {
 #contact-form fieldset {
 	padding: 2%;
 	margin: 2% auto;
-	min-width: 400px;
-	max-width: 400px;
+	min-width: 360px;
+	max-width: 360px;
 }
 
 label, input, textarea {
@@ -218,7 +221,7 @@ input[type="submit"]:hover {
 	color: var(--azure);
 }
 
-.gen-link:hover {
+.gen-link:hover, .static-link:hover {
 	color: var(--bittersweet);
 }
 
@@ -325,6 +328,45 @@ input[type="submit"]:hover {
 
 /* Media Queries */
 @media screen and (min-width: 900px) {
+	/* Main Nav */
+	.main-nav {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;	
+	}
+
+	.main-nav .nav-list {
+		background-color: var(--alabaster);
+		flex-grow: 1;
+	}
+
+	.main-nav .nav-link {
+		flex-grow: 0;	
+	}
+
+	/* Admin Nav */
+	.admin-nav {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;	
+		background-color: var(--alabaster);
+	}
+
+	.admin-nav .nav-list {
+		flex-grow: 0;
+		margin-right: auto;
+	}
+
+	.admin-nav .nav-link {
+		padding: 20px;
+	}
+
+	.admin-nav .logout-btn-container {
+		background-color: var(--bittersweet);
+		display: flex;
+		justify-content: center;
+		padding: 0 2%;
+	}
 
 	#form-container {
 	}
