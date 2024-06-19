@@ -85,11 +85,22 @@ router.post('/admin', async (req, res) => {
 router.get('/admin-blog', authMiddleware, async (req, res) => {
 	try {
 		const title = "Blog";
-		const data = await Post.aggregate([ {$sort: { createdAt: -1 }}]);
+		const publishedPosts = await Post.aggregate([
+			{$match: {published: true }},
+			{$sort: { createdAt: -1 }}
+		]);
+		const draftPosts = await Post.aggregate([
+			{ $match: { published: false } },
+			{ $sort: { createdAt: -1 } }
+		]);
+
+		console.log(draftPosts);
+		console.log(publishedPosts);
 		res.render('admin/admin-blog', {
 			layout: adminLayout,
 			title: title,
-			posts: data
+			publishedPosts: publishedPosts,
+			draftPosts: draftPosts
 		});
 
 	} catch (error) {
@@ -142,7 +153,8 @@ router.post("/add-post", authMiddleware, async (req, res, next) => {
 		try {
 			const newPost = new Post({
 				title: req.body.title,
-				body: req.body.body 
+				body: req.body.body,
+				published: req.body.published
 			});
 
 			await Post.create(newPost);
@@ -168,7 +180,7 @@ router.get("/edit-post/:id", authMiddleware, async (req, res, next) => {
 		res.render('admin/edit-post', {
 			title: 'View / Edit Post',
 			layout: adminLayout,
-			data: post
+			data: post,
 		});
 	} catch (error) {
 		console.log(error);
@@ -184,12 +196,13 @@ router.put("/edit-post/:id", authMiddleware, async (req, res, next) => {
 		await Post.findByIdAndUpdate(req.params.id, {
 			title: req.body.title,
 			body: req.body.body,
-			updatedAt: Date.now()
+			updatedAt: Date.now(),
+			published: req.body.published
 		});
 
 		res.redirect(`/edit-post/${req.params.id}`);
 	} catch (error) {
-		console.llog(error);
+		console.log(error);
 	}
 });
 
@@ -200,7 +213,7 @@ router.put("/edit-post/:id", authMiddleware, async (req, res, next) => {
 router.delete('/delete-post/:id', authMiddleware, async (req, res, next) => {
 	try {
 		await Post.deleteOne({ _id: req.params.id });
-		res.redirect('/dashboard');
+		res.redirect('/admin-blog');
 	} catch (error) {
 		console.log(error);
 	}

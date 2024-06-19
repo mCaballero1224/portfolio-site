@@ -17,6 +17,10 @@ const PostSchema = new Schema({
 	updatedAt: {
 		type: Date,
 		default: Date.now
+	},
+	published: {
+		type: Boolean,
+		default: false
 	}
 });
 

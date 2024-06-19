@@ -56,7 +56,10 @@ router.get('/blog', async (req, res) => {
 
 	try {
 		// get the Posts from the DB, sort by newest
-		const data = await Post.aggregate([ {$sort: { createdAt: -1 }}])
+		const data = await Post.aggregate([
+			{$sort: { createdAt: -1 }},
+			{$match: { published: true }}
+		])
 		.skip(perPage * page - perPage)
 		.limit(perPage)
 		.exec();

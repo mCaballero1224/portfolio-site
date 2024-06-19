@@ -1,10 +1,14 @@
 <main>
-	<form action="/add-post" method="POST">
+	<form action="/add-post" method="POST" class="add-blog-form">
 		<fieldset>
 			<legend>Add New Post</legend>
 			
 			<label for="title"><b>Title</b>: </label>
 			<input type="text" placeholder="Post Title" name="title">
+
+			<label for="published"><b></b>Submit as: </label>
+			<input type="radio" name="published" value="true">Published</input>
+			<input type="radio" name="published" value="false">Draft</input>
 
 			<label for="title"><b>Content</b>: </label>
 			<textarea placeholder="Post Content" name="body" cols="50" rows="10"></textarea>

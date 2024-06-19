@@ -80,15 +80,13 @@ footer {
 .main-nav .nav-link {
 	flex-grow: 1;
 	background-color: var(--azure);
-	padding: 20px;
+	padding: 2%;
 	color: var(--alabaster);
 }
 
 .nav-link:hover {
 	background-color: var(--eerie-black);
 	color: var(--alabaster);
-	border-bottom: 3px solid var(--alabaster);
-	margin-bottom: -3px;
 }
 
 /* Admin Nav */
@@ -324,6 +322,55 @@ input[type="submit"]:hover {
 	flex-wrap: nowrap;
 	justify-content: space-around;
 	font-size: 1.1em;
+}
+
+/* Admin Pages */
+
+/* admin-blog */
+table, th, td {
+	border: 1px solid var(--alabaster);
+	text-align: left;
+}
+
+caption {
+	background-color: var(--alabaster);
+	color: var(--eerie-black);
+	padding: 5px 0;
+}
+
+table {
+	width: 100%;
+	margin: 2% auto;
+	table-layout: fixed;
+}
+
+th, td {
+	display: table-cell;
+	min-width: 1px;
+	width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	padding: 2px 4px;
+}
+
+.delete-cell input {
+	background-color: transparent;
+	text-decoration: underline;
+}
+
+.delete-cell input:hover {
+	background-color: transparent;
+}
+
+/* add-post */
+.add-blog-form, .edit-blog-form {
+	margin: 0 auto;	
+	max-width: 90%;
+}
+
+.add-blog-form textarea, .edit-blog-form textarea {
+	max-width: 300px;
 }
 
 /* Media Queries */

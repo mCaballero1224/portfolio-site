@@ -1,32 +1,57 @@
 <main>
-	<div> 
-		<div>
-			<h2>Posts</h2>
-			<a href="/add-post" class="static-link">+Add New</a>
-		</div>
-		<div>
-			<div>
-				{{#each posts}}
-				<div>
-					<li>
-						<a href="/post/{{_id}}">{{title}} &nearr;</a>
-						<p>createdAt: {{formatDate createdAt}}</p>
-						<p>updatedAt: {{formatDate updatedAt}}</p>
-					</li>
-					<div>
-						<a href="/edit-post/{{_id}}"">&#9998;Edit</a>
+	<table id="published-blogs-table">
+		<thead>
+			<caption>Published Posts</caption>
+			<tr>
+				<th><a href="/add-post" class="static-link">+New</a></th>
+				<th></th>
+				<th>Title</th>
+				<th>Created At</th>
+				<th>Last Updated</th>
+			</tr>
+		</thead>
+		<tbody>
+		{{#each publishedPosts}}
+			<tr data-value="{{_id}}">
+				<td class="edit-cell"><a class="static-link" href="/edit-post/{{_id}}"">Edit</a></td>
+				<td class="delete-cell">
+					<form action="/delete-post/{{_id}}?_method=DELETE" method="POST">
+						<input class="static-link" type="submit" value="Delete">
+					</form>
+				</td>
+				<td class="title-cell"><a class="static-link" href="/post/{{_id}}">{{title}}</a></td>
+				<td class="created-cell">{{formatDate createdAt}}</td>
+				<td class="updated-cell">{{formatDate updatedAt}}</td>
+			</tr>
+		{{/each}}
+		</tbody>
+	</table>
+	<table id="drafts-blog-table">
+			<thead>
+				<caption>Draft Posts</caption>
+				<tr>
+					<th><a href="/add-post" class="static-link">+New</a></th>
+					<th></th>
+					<th>Title</th>
+					<th>Created At</th>
+					<th>Last Updated</th>
+				</tr>
+			</thead>
+			<tbody>
+			{{#each draftPosts}}
+				<tr data-value="{{_id}}">
+					<td class="edit-cell"><a class="static-link" href="/edit-post/{{_id}}"">Edit</a></td>
+					<td class="delete-cell">
 						<form action="/delete-post/{{_id}}?_method=DELETE" method="POST">
-						<input type="submit" value="Delete">
+							<input class="static-link" type="submit" value="Delete">
 						</form>
-					</div>
-				</div>
-				{{/each}}
-			</div>
-		</div>
-	</div>
-	<div>
-		<div>
-			<h2>Services Montior</h2>
-		</div>
-	</div>
+					</td>
+					<td class="title-cell"><a class="static-link" href="/post/{{_id}}">{{title}}</a></td>
+					<td class="created-cell">{{formatDate createdAt}}</td>
+					<td class="updated-cell">{{formatDate updatedAt}}</td>
+				</tr>
+			{{/each}}
+			</tbody>
+		</table>
+
 </main>
