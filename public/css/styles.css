@@ -215,15 +215,15 @@ input[type="submit"]:hover {
 }
 
 /* Links */
-.gen-link, .static-link {
+a, .gen-link, .static-link {
 	color: var(--azure);
 }
 
-.gen-link:hover, .static-link:hover {
+a, .gen-link:hover, .static-link:hover {
 	color: var(--bittersweet);
 }
 
-.gen-link:visited {
+a, .gen-link:visited {
 	color: var(--bittersweet);
 }
 
