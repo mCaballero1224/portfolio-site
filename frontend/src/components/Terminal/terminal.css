@@ -1,0 +1,34 @@
+.terminal {
+	background-color: #3B3045;
+	width: 90%;
+	height: 50vh;
+	margin: 0 auto;
+	padding: 4%;
+	border-radius: 15px;
+}
+
+.terminal p {
+	color: #FFFFFF;
+}
+
+.terminal a {
+	color: #FFFF00;
+	font-weight: bold;
+}
+
+.terminal .terminal-prompt {
+	color: #00FF00;
+}
+
+.terminal .terminal-prompt input {
+	background-color: transparent;
+	outline: 0;
+	border: 0;
+	color: #FFFFFF;
+}
+
+.terminal .placeholder-msg {
+	font-weight: bold;
+	color: #FFFF00;
+	font-size: 20px;
+}
