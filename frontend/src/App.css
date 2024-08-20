@@ -1,3 +1,36 @@
+h1 {
+  margin: 0 auto;
+  text-align: center;
+  letter-spacing: .1em;
+  padding: 2%;
+  font-family: Iosevka;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  padding: 0 0 15px 0;
+}
+
+footer {
+  margin-top: auto;
+  min-width: 100vw;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer hr {
+  margin: 5px 0;
+}
+
+i {
+  margin: 8px;
+  color: black;
+  font-size: 25px
+}
 #root {
   display: flex;
   flex-direction: column;
@@ -6,26 +39,40 @@
   line-height: 1.5;
 }
 
-h1 {
-  margin: 0 auto;
-  padding: 0;
-  text-align: center;
-}
-
 #content {
-  padding: 2%;
+  padding: 1% 2%;
 }
 
-header {
-  posiiton: sticky;
-  top: 0;
-  padding: 0 0 15px 0;
+.about-section {
+  margin-bottom: 20px;
 }
 
-h1 {
-  font-family: Iosevka;
-  letter-spacing: .1em;
-  padding: 2%;
+.about-section img {
+  display: block;
+  margin-bottom: 10px;
+  max-width: 300px;
+}
+
+.right img {
+  float: right;
+  margin-left: 15px;
+}
+
+.left img {
+  float: left;
+  margin-right: 15px;
+}
+
+.right p {
+  text-align: right;
+}
+
+.left p {
+  text-align: eft;
+}
+
+.about-section h2 {
+  clear: both; 
 }
 
 .project-card {
@@ -48,24 +95,4 @@ h1 {
 
 .project-card-icon {
   color: white;
-}
-
-footer {
-  margin-top: auto;
-  min-width: 100vw;
-  text-align: center;
-}
-
-footer p {
-  margin: 0;
-}
-
-footer hr {
-  margin: 5px 0;
-}
-
-i {
-  margin: 8px;
-  color: black;
-  font-size: 25px
 }
