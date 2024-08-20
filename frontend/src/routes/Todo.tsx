@@ -4,7 +4,7 @@ import Badge from 'react-bootstrap/Badge';
 export default function Todo() {
   return (
     <>
-      <h1 style={{ fontFamily: 'Iosevka' }}>Site Todo List</h1>
+      <h1>Site Todo List</h1>
       <Accordion defaultActiveKey="0" className="todo-list">
         <Accordion.Item eventKey="0">
           <Accordion.Header>Building the Site<Badge bg="warning" className="in-progress-badge">In Progress</Badge></Accordion.Header>
@@ -12,7 +12,7 @@ export default function Todo() {
             <ul className="todo-list">
               <li className="todo-done">Create basic pages</li>
               <li className="todo-done">Implement routing</li>
-              <li>Add basic/placeholder content</li>
+              <li className="todo-done">Add basic/placeholder content</li>
               <li>Deploy the site</li>
             </ul>
           </Accordion.Body>

@@ -1,16 +1,32 @@
-import { useRouteError } from 'react-router-dom'
+import { 
+  useNavigate,
+  isRouteErrorResponse,
+  useRouteError 
+} from 'react-router-dom'
+import Button from 'react-bootstrap/Button';
 
 export default function ErrorPage() {
-  const error = useRouteError();
-  console.error(error);
+  const navigate = useNavigate();
+  const error = useRouteError() as Error;
+
+  if (!isRouteErrorResponse(error)) {
+    return null;
+  }
 
   return (
-    <div id="error-page">
-      <h1>Whoospie Doodle!</h1>
-      <p>Sorry 'bout that. Looks like you ran into an error.</p>
-      <p>
-        <em>{error.statusText || error.message}</em>
-      </p>
+    <div 
+      style={{ textAlign: 'center', margin: 'auto' }}
+    >
+      <h1>Whoopsie doodle!</h1>
+      <p
+        style={{
+          backgroundColor: '#3B3045',
+          padding: '1% 2%',
+          borderRadius: '10px',
+          color: '#FFFF00'
+        }}
+      >{error.data}</p>
+      <Button onClick={() => navigate(-1)}>&larr; Go back</Button>
     </div>
   );
 }
