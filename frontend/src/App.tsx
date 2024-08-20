@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 import {
   createBrowserRouter,
@@ -14,11 +13,6 @@ import Contact from './routes/Contact'
 import Blog from './routes/Blog'
 import Todo from './routes/Todo'
 import ErrorPage from './routes/ErrorPage'
-
-/* Components */
-import Header from './components/Header'
-import Footer from './components/Footer'
-
 
 /* Broswer Router */
 const router = createBrowserRouter([
