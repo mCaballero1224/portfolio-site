@@ -6,6 +6,10 @@ h1 {
   font-family: Iosevka;
 }
 
+h2 {
+  font-family: Iosevka;
+}
+
 header {
   position: sticky;
   top: 0;
@@ -44,6 +48,11 @@ i {
   padding: 1% 2%;
 }
 
+#about-me {
+  margin: 2% auto;
+  max-width: 800px;
+}
+
 .about-section {
   margin-bottom: 20px;
 }
@@ -51,7 +60,6 @@ i {
 .about-section img {
   display: block;
   margin-bottom: 10px;
-  max-width: 300px;
 }
 
 .right img {
