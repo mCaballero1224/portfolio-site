@@ -7,13 +7,13 @@ export default function Todo() {
       <h1>Site Todo List</h1>
       <Accordion defaultActiveKey="0" className="todo-list">
         <Accordion.Item eventKey="0">
-          <Accordion.Header>Building the Site<Badge bg="warning" className="in-progress-badge">In Progress</Badge></Accordion.Header>
+          <Accordion.Header>Building the Site<Badge bg="success" className="in-progress-badge">Complete!</Badge></Accordion.Header>
           <Accordion.Body>
             <ul className="todo-list">
               <li className="todo-done">Create basic pages</li>
               <li className="todo-done">Implement routing</li>
               <li className="todo-done">Add basic/placeholder content</li>
-              <li>Deploy the site</li>
+              <li className="todo-done">Deploy the site</li>
             </ul>
           </Accordion.Body>
         </Accordion.Item>
