@@ -5,7 +5,10 @@
 }
 
 .navi-brand img {
-
+	height: 50px;
+	background-color: #EEEEEE;
+	padding: 4px;
+	border-radius: 5px;
 }
 
 .navi-brand p {
@@ -16,4 +19,8 @@
 
 .navi-brand:hover p {
 	color: #00FF00;
+}
+
+.navi-brand:hover img {
+	background-color: #00FF00;
 }
