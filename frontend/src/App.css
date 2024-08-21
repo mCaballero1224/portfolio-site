@@ -64,11 +64,11 @@ i {
   margin-right: 15px;
 }
 
-.right p {
+.right p, .right h2 {
   text-align: right;
 }
 
-.left p {
+.left p, .left h2 {
   text-align: eft;
 }
 
