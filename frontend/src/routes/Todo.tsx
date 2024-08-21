@@ -18,7 +18,7 @@ export default function Todo() {
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="1">
-          <Accordion.Header>Creating the Contact Form<Badge bg="warning" className="in-progress-badge">In Progress</Badge></Accordion.Header>
+          <Accordion.Header>Making Contact Form<Badge bg="warning" className="in-progress-badge">In Progress</Badge></Accordion.Header>
           <Accordion.Body>
             <ul>
               <li>Design form and fieldsets</li>
