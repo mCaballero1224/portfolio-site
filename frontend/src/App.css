@@ -57,6 +57,10 @@ i {
   margin-bottom: 20px;
 }
 
+.about-section p {
+  text-indent: 2em;
+}
+
 .about-section img {
   display: block;
   margin-bottom: 10px;
@@ -72,12 +76,12 @@ i {
   margin-right: 15px;
 }
 
-.right p, .right h2 {
+.right h2 {
   text-align: right;
 }
 
 .left p, .left h2 {
-  text-align: eft;
+  text-align: left;
 }
 
 .about-section h2 {
@@ -105,4 +109,26 @@ i {
 
 .project-card-icon {
   color: white;
+}
+
+@media screen and (max-width: 600px) {
+  .about-section {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  .about-section h2 {
+    text-align: center;
+  }
+
+  .about-section img {
+    display: block;
+    margin: 2% auto;
+    float: none;
+  }
+
+  .about-section p {
+    display: block;
+    text-align: left;
+  }
 }
