@@ -6,6 +6,7 @@ export default function NaviBrand() {
 			<img
 				src="/android-chrome-192x192.png"
 				className="d-inline-block"
+				alt="favicon image"
 			/>
 			<p>Michael's Terminal</p>
 		</div>
