@@ -67,7 +67,7 @@ export default function Contact() {
     <>
       {submitted && <Alert variant="success">Thank you for your message!</Alert>}
       {error && <Alert variant="danger">{error}</Alert>}
-      <p className="text-center">Under construction! See what else I'm working on the <Link to={`/todo`}>Todo</Link> page.</p>
+      <p className="text-center">Under construction! See what else I'm working on at the <Link to={`/todo`}>Todo</Link> page.</p>
       <Form onSubmit={handleSubmit} id="contact-form">
         <Form.Text>All fields required.</Form.Text>
         <Form.Group controlId="formName" className="mb-3 mt-3">
