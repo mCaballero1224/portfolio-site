@@ -19,6 +19,7 @@ export default function About() {
             <p>During my downtime, I enjoy journaling, video games, and attending a Brazillian Jiu Jitsu class.</p>
           </Col>
         </Row>
+        <hr />
         <Row className="right about-section">
           <Col>
             <h2>Education</h2>
