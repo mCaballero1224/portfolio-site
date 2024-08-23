@@ -1,3 +1,7 @@
+body {
+  font-family: monospace;
+}
+
 h1 {
   margin: 0 auto;
   text-align: center;
@@ -109,6 +113,14 @@ i {
 
 .project-card-icon {
   color: white;
+}
+
+#contact-form {
+  margin: 4%;
+  background-color: #DDDDDD;
+  padding: 4%;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 @media screen and (max-width: 600px) {

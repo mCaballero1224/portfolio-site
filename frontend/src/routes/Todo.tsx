@@ -5,7 +5,7 @@ export default function Todo() {
   return (
     <>
       <h1>Site Todo List</h1>
-      <Accordion defaultActiveKey="0" className="todo-list">
+      <Accordion defaultActiveKey="1" className="todo-list">
         <Accordion.Item eventKey="0">
           <Accordion.Header>Building the Site<Badge bg="success" className="in-progress-badge">Complete!</Badge></Accordion.Header>
           <Accordion.Body>
@@ -21,7 +21,7 @@ export default function Todo() {
           <Accordion.Header>Making Contact Form<Badge bg="warning" className="in-progress-badge">In Progress</Badge></Accordion.Header>
           <Accordion.Body>
             <ul>
-              <li>Design form and fieldsets</li>
+              <li className="todo-done">Design form and fieldsets</li>
               <li>Handle form submission</li>
               <li>Implement email subscription via nodemailer</li>
             </ul>
