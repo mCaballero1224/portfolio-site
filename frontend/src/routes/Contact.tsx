@@ -23,7 +23,7 @@ export default function Contact() {
 
   // Handle input changes
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, type, checked, value } = e.target;
+    const { name, type, checked, value } = e.target as HTMLInputElement;
     if (type === 'checkbox') {
       setFormData({
         ...formData,
@@ -38,7 +38,7 @@ export default function Contact() {
   };
 
   // Handle form submission
-  const handleSubmit = (e: Formevent<HTMLFormElement>) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     // Prevent default behavior
     e.preventDefault();
 
@@ -59,6 +59,7 @@ export default function Contact() {
       name: '',
       email: '',
       message: '',
+      subscribe: false,
     });
   };
 
