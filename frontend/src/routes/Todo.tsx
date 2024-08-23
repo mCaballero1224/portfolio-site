@@ -31,7 +31,7 @@ export default function Todo() {
           <Accordion.Header>Adding Content<Badge bg="warning" className="in-progress-badge">In Progress</Badge></Accordion.Header>
           <Accordion.Body>
             <ul>
-              <li>Decide on projects to showcase</li>
+              <li className="todo-done">Decide on projects to showcase</li>
               <li>Implement git server + frontend</li>
               <li>Host chat app</li>
               <li>Create and display terminal emulator on home page</li>

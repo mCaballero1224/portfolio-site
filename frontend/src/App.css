@@ -93,8 +93,30 @@ i {
 }
 
 .project-card {
-  margin: 2%;
-  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 300px;
+  min-width: 300px;
+  margin: 0 auto;
+}
+
+.project-card .card-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project-card .card-title {
+  text-align: center;
+}
+
+.project-card .mb-auto {
+  flex: 1;
+}
+
+.project-card-icon {
+  color: white;
 }
 
 .in-progress-badge {
@@ -111,14 +133,11 @@ i {
   text-decoration: line-through;
 }
 
-.project-card-icon {
-  color: white;
-}
-
 #contact-form {
-  margin: 4%;
+  margin: 4% auto;
   background-color: #DDDDDD;
-  padding: 4%;
+  max-width: 600px;
+  padding: 20px;
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -142,5 +161,9 @@ i {
   .about-section p {
     display: block;
     text-align: left;
+  }
+
+  #contact-form {
+    max-width: 360px;
   }
 }

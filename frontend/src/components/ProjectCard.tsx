@@ -1,18 +1,29 @@
-import Button from 'react-bootstrap/Button'
-import Card from 'react-bootstrap/Card'
-import { CardData } from '../data/projectData'
+import React from 'react';
+import { Card, Button } from 'react-bootstrap';
 
-export default function ProjectCard({ title, description }: CardData) {
+interface ProjectCardProps {
+  title: string;
+  imageUrl: string;
+  description: string;
+  githubLink: string;
+}
+
+const ProjectCard: React.FC<ProjectCardProps> = ({ title, imageUrl, description, githubLink }) => {
   return (
-    <Card style={{ width: '18rem', margin: '15px auto' }} className="project-card">
-      <Card.Img 
-        variant="top" 
-        src="https://placehold.co/180x100" 
-        alt="project image for {title}"
-      />
-      <Card.Title>{title}</Card.Title>
-      <Card.Text>{description}</Card.Text>
-      <Button variant="dark"><i className="fab fa-github project-card-icon"></i></Button>
+    <Card className="project-card">
+      <Card.Img variant="top" src={imageUrl} alt={title} />
+      <Card.Body className="d-flex flex-column">
+        <div className="mb-auto">
+          <Card.Title>{title}</Card.Title>
+          <Card.Text className="mb-3">{description}</Card.Text>
+        </div>
+        <Button as="a" variant="dark" href={githubLink} target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-github project-card-icon"></i>
+        </Button>
+      </Card.Body>
     </Card>
   );
-}
+};
+
+export default ProjectCard;
+
