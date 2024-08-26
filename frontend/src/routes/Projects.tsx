@@ -5,7 +5,7 @@ const projects = [
   {
     title: 'Netmonitor (Under Construction)',
     imageUrl: 'https://placehold.co/300x150',
-    description: 'A Python application that monitors services based on user configuration, demonstrating a working understanding of client/server architecture and standard networking protocols.',
+    description: 'A Python application that monitors services based on user configuration.',
     githubLink: 'https://github.com/mCaballero1224/netmonitor',
   },
   {
