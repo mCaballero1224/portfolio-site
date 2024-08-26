@@ -1,6 +1,6 @@
 body {
   font-family: monospace;
-  font-size: 1.4em;
+  font-size: 1.5em;
 }
 
 h1 {
@@ -62,10 +62,6 @@ i {
   margin-bottom: 20px;
 }
 
-.about-section h2 {
-    font-weight: bold;
-}
-
 .about-section p {
   text-indent: 2em;
 }
@@ -110,10 +106,12 @@ i {
   display: flex;
   flex-direction: column;
   height: 100%;
+  font-size: 1.1em;
 }
 
 .project-card .card-title {
   text-align: center;
+  font-weight: bold;
 }
 
 .project-card .mb-auto {
