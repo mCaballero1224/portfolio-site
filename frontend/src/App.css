@@ -1,5 +1,6 @@
 body {
   font-family: monospace;
+  font-size: 1.4em;
 }
 
 h1 {
@@ -59,6 +60,10 @@ i {
 
 .about-section {
   margin-bottom: 20px;
+}
+
+.about-section h2 {
+    font-weight: bold;
 }
 
 .about-section p {

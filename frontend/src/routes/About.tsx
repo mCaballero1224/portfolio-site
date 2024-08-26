@@ -27,7 +27,7 @@ export default function About() {
               src="https://placehold.co/300x200"
               alt="placeholder image"
             />
-            <p>I completed an Associate's Degree with honors at my local community college in 2022, majoring in Computer Science. While working towards this degree, I dipped my toes into a number of disciplines, including business, philosophy, and physics. Engaging with these subjects really helped to broaden my perspectives and train critical thinking skills against real-world issues.</p>
+            <p>I completed an Associate's Degree with honors at my local community college in 2023, majoring in Computer Science. While working towards this degree, I dipped my toes into a number of disciplines, including business, philosophy, and physics. Engaging with these subjects really helped to broaden my perspectives and train critical thinking skills against real-world issues.</p>
             <p>I started university shortly after. So far, I've taken classes surrounding algorithms, data structures, low-level programming and computer architecture. Currently, I'm taking courses focused on Networking and Operating Systems.</p>
           </Col>
         </Row>
