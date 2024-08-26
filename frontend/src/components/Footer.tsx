@@ -1,4 +1,4 @@
-export default function Header() {
+export default function Footer() {
   return (
     <footer>
       <p>&copy; Michael Caballero ({new Date().getFullYear()})</p>

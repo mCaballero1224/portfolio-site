@@ -9,7 +9,7 @@ export default function Todo() {
         <Accordion.Item eventKey="0">
           <Accordion.Header>Building the Site<Badge bg="success" className="in-progress-badge">Complete!</Badge></Accordion.Header>
           <Accordion.Body>
-            <ul className="todo-list">
+            <ul>
               <li className="todo-done">Create basic pages</li>
               <li className="todo-done">Implement routing</li>
               <li className="todo-done">Add basic/placeholder content</li>
@@ -18,7 +18,7 @@ export default function Todo() {
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="1">
-          <Accordion.Header>Making Contact Form<Badge bg="warning" className="in-progress-badge">In Progress</Badge></Accordion.Header>
+          <Accordion.Header>Contact Form<Badge bg="warning" className="in-progress-badge">In Progress</Badge></Accordion.Header>
           <Accordion.Body>
             <ul>
               <li className="todo-done">Design form and fieldsets</li>
@@ -42,7 +42,7 @@ export default function Todo() {
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="3">
-          <Accordion.Header>Maintaining a Platform<Badge bg="warning" className="in-progress-badge">In Progress</Badge></Accordion.Header>
+          <Accordion.Header>Site Maintenance<Badge bg="warning" className="in-progress-badge">In Progress</Badge></Accordion.Header>
           <Accordion.Body>
             <ul>
               <li>Create one blog/vlog per week</li>

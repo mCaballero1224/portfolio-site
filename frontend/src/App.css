@@ -45,8 +45,8 @@ i {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #EEEEEF;
   line-height: 1.5;
+  background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
 }
 
 #content {
@@ -127,9 +127,14 @@ i {
 }
 
 .todo-list {
-  max-width: 400px;
-  width: 50%;
+  width: 600px;
   margin: 2% auto;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 15px;
+}
+
+.todo-list .accordion-button {
+  font-size: 20px;
 }
 
 .todo-done {
@@ -167,6 +172,12 @@ i {
   }
 
   #contact-form {
+    max-width: 380px;
+  }
+
+
+  .todo-list {
     max-width: 360px;
+    min-width: 360px;
   }
 }
